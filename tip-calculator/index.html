@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet">
+  </head>
+  <body class=" bg-[#c5e4e7] flex flex-col items-center">
+    <div class="font-space-bold text-[#3e6264] text-[24px] w-full h-30 px-15 py-6 flex flex-col items-center gap-2.5">
+      <p>S P L I</p>
+      <p>T T E R</p>
+    </div>
+
+    <div class="flex flex-col rounded-t-2xl py-8 px-5 bg-white md:grid md:grid-cols-2 md:gap-8 md:w-3/5 md:rounded-b-2xl ">
+      <div>
+      <label class="flex flex-col gap-2">
+        <p class="text-[#7b8e8e]">BILL</p>
+        <div class="relative flex flex-col">
+           <span class="absolute left-3 top-1/2 -translate-y-1/2 text-[#7b8e8e] pointer-events-none">
+            $  </span>
+          <input type="text" id="bill" placeholder="0.00" class="focus:border-[#21c5aa] rounded-md bg-[#f3f8fb] w-full h-12 text-[#00474b] font-space-bold text-[22px] text-right " />
+        </div>
+      </label>
+
+      <div class="flex flex-col gap-2.5 mt-3">
+
+        <p class="text-[#7b8e8e]">Select Tip %</p>
+
+        <div class="tippercent grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2 ">
+          <div class="tip text-center hover:bg-[#21c5aa] bg-[#00474b] text-white text-[22px]  rounded-md font-space-bold" >5%</div>
+          <div class="tip text-center bg-[#00474b] hover:bg-[#21c5aa] text-white text-[22px] rounded-md font-space-bold">10%</div>
+          <div class="tip text-center bg-[#00474b] hover:bg-[#21c5aa] text-white text-[22px] rounded-md font-space-bold">15%</div>
+          <div class="tip text-center bg-[#00474b] hover:bg-[#21c5aa] text-white text-[22px] rounded-md font-space-bold">25%</div>
+          <div class="tip text-center bg-[#00474b] hover:bg-[#21c5aa] text-white text-[22px] rounded-md font-space-bold">50%</div>
+          <input id="tip1" class="tip bg-[#f3f8fb] focus:border-[#21c5aa] font-space-bold text-[20px] rounded-md text-[#00474b] text-right" placeholder="  Custom "/>
+        </div>
+
+      </div>
+
+      <label class="flex flex-col gap-2 mt-3">
+
+        <p  class=" text-[#7b8e8e]   font-space-regular">Number of people</p>
+
+        <div class="relative flex flex-col font-space-bold">
+           <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16"><path fill="#9EBBBD" d="M9.573 7.729c.406 0 .784.07 1.126.209.342.14.639.33.881.569.232.227.438.503.614.82a5.1 5.1 0 01.407.949c.097.312.178.654.242 1.016.062.359.105.699.126 1.011.02.307.031.624.031.945 0 .836-.259 1.512-.768 2.01-.504.492-1.17.742-1.98.742H2.748c-.81 0-1.477-.25-1.98-.742C.259 14.76 0 14.084 0 13.248c0-.322.01-.64.032-.945.02-.312.063-.652.126-1.01.063-.363.144-.705.242-1.017.1-.323.238-.643.407-.948.176-.318.382-.594.613-.821.243-.238.54-.43.882-.57.342-.138.72-.208 1.125-.208.16 0 .313.067.61.265.183.123.397.264.636.421.204.134.48.259.822.372.333.11.671.167 1.005.167a3.19 3.19 0 001.006-.167c.341-.113.618-.238.822-.372l.636-.42c.296-.2.45-.266.61-.266zM6.598 0C7.63 0 8.522.38 9.252 1.129s1.1 1.666 1.1 2.724c0 1.06-.37 1.976-1.1 2.725-.73.75-1.623 1.13-2.654 1.13-1.03 0-1.924-.38-2.653-1.13-.73-.749-1.1-1.666-1.1-2.725 0-1.058.37-1.975 1.1-2.724C4.675.379 5.567 0 6.598 0z"/>
+            </svg>
+          </span>
+          <input type="text" placeholder="0"  id="people" class="rounded-md bg-[#f3f8fb] w-full h-12 pl-1.5 text-[#00474b] text-[22px] text-right " />
+        </div>
+
+      </label>
+
+      </div>
+
+      <div class="bg-[#00474b] mt-3 px-4 pt-6 pb-4 flex flex-col rounded-2xl gap-2">
+        <div class="flex justify-between font-space-regular">
+          <div class="flex flex-col gap-1 items-start">
+            <p class="text-white text-[15px font-space-bold]">Tip Amount</p>
+            <p class="text-[11px] text-[#4e8184]">/ person</p>
+          </div>
+
+          <div id="tipPerPerson" class="text-[#21c5aa] font-space-bold text-[24px]">$0.00</div>
+
+        </div>
+
+         <div class="flex justify-between font-space-regular">
+          <div class="flex flex-col gap-1 items-start">
+            <p class="text-white text-[15px font-space-bold]">Total</p>
+            <p class="text-[11px] text-[#4e8184]">/ person</p>
+          </div>
+
+          <div id="tipAmount" class="text-[#21c5aa] font-space-bold text-[24px]">$0.00</div>
+
+        </div>
+
+        <button id="resetBtn" class="text-center rounded-md mt-1.5 md:mt-25 text-[20px] h-10 w-full font-space-regular text-[#00474b] bg-[#21c5aa] hover:bg-[#75e0ce] ">
+          RESET
+        </button>
+
+      </div>
+
+
+    </div>
+  
+
+  <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
