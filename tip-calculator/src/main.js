@@ -51,12 +51,11 @@ function calculateTip(tip, numPeople, bill) {
     tipPerPerson.innerText = "$" + perPersonValue.toFixed(2);
 }
 
-const tip1 = document.getElementById("tip1").value;
+
  const resetBtn = document.getElementById('resetBtn');
   resetBtn.addEventListener('click', () => {
     billInput.value = '';
     numPeople.value = '';
-    tip1 = '';
-    tipPerPerson.innerText = "$" + 0.00;
+       tipPerPerson.innerText = "$" + 0.00;
      tipAmount.innerText = "$" + 0.00;
   });

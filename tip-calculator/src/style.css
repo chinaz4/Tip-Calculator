@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: SpaceMono;
-  src: url("./src/fonts/SpaceMono-Regular.ttf");
+  src: url("./public/fonts/SpaceMono-Regular.ttf");
   
 }
 
 @font-face {
   font-family: SpaceMonobold;
-  src: url("./src/fonts/SpaceMono-Bold.ttf") ;
+  src: url(".public/fonts/SpaceMono-Bold.ttf") ;
   
 }
 
